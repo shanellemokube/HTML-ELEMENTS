@@ -21,7 +21,7 @@ a:hover {
 }
 
 /* Child Selector */
-u1 > li {
+ul > li {
     font-weight:bold;
 
 }
@@ -56,7 +56,7 @@ p:not(:first-of-type) {
 
 /* ::before pseudo-element */
 ul li::before{
-    content: "🚀" ;
+    content:"🌊";
 }
 
 /* ::after pseudo-element */
