@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIY MUSIC App - Feel The Music</title>
+
+    <style>
+        /* --------- GLOBAL --------- */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #000, #1a0000);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        h1,h2,h3 {
+            color: #8b0000;
+        }
+
+        p {
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        /* --------- HEADER --------- */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle, #1a0000, #000);
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            animation: slideDown 1s ease forwards;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            animation:  fadeIn 2s ease forwards;
+        }
+
+        /* --------- BUTTON --------- */
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: #8b0000;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            background: #b30000;
+        }
+
+        /*--------- GENRES --------- */
+            .genres {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 25px;
+            }
+
+            .genre-card {
+                background: rgba(139, 0, 0, 0.15);
+                padding: 25px;
+                border-radius: 15px;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+            }
+
+            .genre-card:hover {
+                transform: translateY(-10px) ;
+                box-shadow: 0 10px 25px rgba(139, 0, 0, 0.4)
+            }
+
+            /* --------- IMAGE + TEXT SECTION --------- */
+            .image-text {
+                position: relative;
+                text-align: center;
+                padding: 120px 20px;
+            }
+
+            .image-text p {
+                max-width: 600px;
+                margin: auto;
+                font-size: 1.1rem;
+                z-index: 2;
+                position: relative;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 30px;
+                border-radius: 15px;
+            }
+
+            .float-image {
+                position: absolute;
+                width: 220px;
+                opacity: 220px;
+                animation: float 4s ease-in-out infinite;
+            }
+
+            .left-image {
+                left: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .right-image {
+                right: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+                animation-delay: 2s;
+            }
+
+            /* --------- FOOTER ---------*/
+            footer {
+                text-align: center;
+                padding: 25px;
+                background: #000;
+                opacity: 0.7;
+                font-size: 0.9rem;
+            }
+
+            /* --------- FOOTER --------- */
+            footer {
+                text-align: center;
+                padding: 25px;
+                background: #000;
+                opacity: 0.7;
+                font-size: 0.9rem;
+            }
+
+            /* --------- ANIMATIONS --------- */
+            @keyframes fadeIn {
+            from { opacity: 0; }
+            to {opacity: 1; }
+            }
+
+            @keyframes slideDown {
+            from {
+            opacity: 0;
+            transform: translateY(-30px) ;
+            }
+            to {
+                opacity: 1;
+                transfrom: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-50%) translateY(0) ; }
+            50% { transform: translateY(-50%) translateY(-15px) ; }
+            100% { transform: translateY(-50%) translateY(0) ; }
+        }
+
+        /* --------- RESPONSIVE --------- */
+        @media (max-width: 768px) {
+            .float-image {
+                display: none;
+            }
+         }
+      </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Feel the Music</h1>
+        <p>Cool sounds. Deep emotions.</p>
+        <a href="#genres" class="button">Explore Music</a>
+    </header>
+
+    <section>
+        <h2>Why We Listen To Music</h2>
+        <p>
+            Music allows us to feel without speaking. It becomes a space where emotion and rhythym collide.
+        </p>
+    </section>
+
+    <section id="genres">
+        <h2>Genres That Set The Mood</h2>
+        <div class="genres">
+            <div class="genre-card">
+            <h3>R&B</h3>
+            <p>Late nights,smooth vocals,deep emotion.</p>
+        </div>
+        <div class="genre-card">
+            <h3>Pop</h3>
+            <p>Bold melodies and unforgettable hooks.</p>
+        </div>
+        <div class="genre-card">
+            <h3>Hip-Hop</h3>
+            <p>Rhythym,poetry and expression.</p>
+        </div>
+        <div class="genre-card">
+            <h3>Jazz</h3>
+            <p>Timeless sound and creative freedom</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE + TEXT SECTION -->
+     <section class="image-text">
+        <!-- Replace image paths with your own -->
+         <img src="before bg remove.jpg" class="float-image left-image" alt="Music Image Left">
+        <img src="before bg remove.jpg" class="float-image right-image" alt="Music Image Right">
+
+        <p>
+            Music wraps around us. It moves with us, breathes with us,and fills the silence with meaning. Let the sound surround you.
+        </p>
+     </section>
+
+     <footer>
+        |<p>🎧 Feel the Music © 2026</p>
+     </footer>
+
+</body>
+</html>
+    
