@@ -1,0 +1,6 @@
+h1 {
+    @font-face {
+        font-family:"MyFont";
+        src: url(Poppin-Regular.ttf);
+    }
+}
